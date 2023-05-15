@@ -19,7 +19,9 @@ class JournalCard extends StatelessWidget {
   Widget build(BuildContext context) {
     if (journal != null) {
       return InkWell(
-        onTap: () {},
+        onTap: () {
+          callAddJournalScreen(context, journal: journal);
+        },
         child: Container(
           height: 115,
           margin: const EdgeInsets.all(8),
@@ -102,16 +104,28 @@ class JournalCard extends StatelessWidget {
     }
   }
 
-  void callAddJournalScreen(BuildContext context) {
+  void callAddJournalScreen(BuildContext context, {Journal? journal}) {
+    Journal innerJournal = Journal(
+      id: const Uuid().v1(),
+      content: "",
+      createdAt: showedDate,
+      updatedAt: showedDate,
+    );
+
+    Map<String,dynamic> map = {};
+    if (journal != null) {
+      innerJournal = journal;
+      map['is_editing'] = false;
+    }else{
+      map['is_editing'] = true;
+    }
+
+    map["journal"] = innerJournal;
+
     Navigator.pushNamed(
       context,
       'add-journal',
-      arguments: Journal(
-        id: const Uuid().v1(),
-        content: "",
-        createdAt: showedDate,
-        updatedAt: showedDate,
-      ),
+      arguments: map,
     ).then((value) {
       if (value != null && value == true) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
