@@ -4,28 +4,34 @@
   },
   "journals": [
     {
-      "id": "79a582e0-f340-11ed-84d2-337951fd78b4",
-      "content": "Teste refresh",
-      "created_at": "2023-05-05 16:49:21.962848",
-      "updated_at": "2023-05-05 16:49:21.962848"
-    },
-    {
       "id": "968ddf10-f340-11ed-84d2-337951fd78b4",
       "content": "teste",
       "created_at": "2023-05-13 16:49:21.962848",
       "updated_at": "2023-05-13 16:49:21.962848"
     },
     {
-      "id": "cea43d40-f340-11ed-a98e-cd4e98bedc1e",
-      "content": "Dia %!",
-      "created_at": "2023-05-05 16:51:49.800985",
-      "updated_at": "2023-05-05 16:51:49.800985"
-    },
-    {
       "id": "9292ee40-f341-11ed-87b0-ada649e686f2",
       "content": "teste quarta feira",
       "created_at": "2023-05-10 16:57:24.358013",
       "updated_at": "2023-05-10 16:57:24.358013"
+    },
+    {
+      "id": "5b434930-f346-11ed-b9f1-a1c7c83fe371",
+      "content": "Hoje  quinta feira!",
+      "created_at": "2023-05-11 17:31:37.582714",
+      "updated_at": "2023-05-11 17:31:37.582714"
+    },
+    {
+      "id": "70e157f0-f346-11ed-b9f1-a1c7c83fe371",
+      "content": "sem acento ",
+      "created_at": "2023-05-08 17:31:37.582714",
+      "updated_at": "2023-05-08 17:31:37.582714"
+    },
+    {
+      "id": "9a87e150-f346-11ed-b9f1-a1c7c83fe371",
+      "content": "Fim do curso!\n",
+      "created_at": "2023-05-15 17:31:37.582714",
+      "updated_at": "2023-05-15 17:31:37.582714"
     }
   ]
 }
