@@ -4,6 +4,21 @@
       "email": "lucas.samel97@gmail.com",
       "password": "$2a$10$cURB1EQJ5bw9mwicY0Tn2OohKsXcTXbqP5DAKlkbkhJ6ZFcJewNFC",
       "id": 1
+    },
+    {
+      "email": "lucas@gmail.com",
+      "password": "$2a$10$CyPzh0JilRdccXbN5Iyny.h4DEKATk0yHXTDv9kUqP6fm.91F9ZXy",
+      "id": 2
+    },
+    {
+      "email": "luca@gmail.com",
+      "password": "$2a$10$xvS3fUgQd/WXDyFkdpSOQOL8x4mkT7rGTYTh2yYMH7OZyY46L3Gwu",
+      "id": 3
+    },
+    {
+      "email": "samel@gmail.com",
+      "password": "$2a$10$vYWzjmFdFH8.vtwjOVYuMOC.9YGBWF1gz5c6uj37XZARXGJlOWLCO",
+      "id": 4
     }
   ],
   "learnhttp": {
