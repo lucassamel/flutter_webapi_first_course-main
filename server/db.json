@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "email": "lucas.samel97@gmail.com",
+      "password": "$2a$10$cURB1EQJ5bw9mwicY0Tn2OohKsXcTXbqP5DAKlkbkhJ6ZFcJewNFC",
+      "id": 1
+    }
+  ],
   "learnhttp": {
     "content": "Olá mundo!"
   },
@@ -62,6 +69,18 @@
       "content": "sexta dia 19",
       "created_at": "2023-05-19 14:37:18.709430",
       "updated_at": "2023-05-19 14:37:18.709430"
+    },
+    {
+      "id": "e39ab240-fa4f-11ed-8f24-1b6179ceb6c5",
+      "content": "teste",
+      "created_at": "2023-05-14 16:26:32.650216",
+      "updated_at": "2023-05-14 16:26:32.650216"
+    },
+    {
+      "id": "1564d210-fa50-11ed-b646-8bffefc6bbb2",
+      "content": "kljsklas",
+      "created_at": "2023-05-22 16:28:54.145224",
+      "updated_at": "2023-05-22 16:28:54.145224"
     }
   ]
 }
