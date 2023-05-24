@@ -1,12 +1,14 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
+import 'package:flutter_webapi_first_course/screens/commom/exception_dialog.dart';
 import 'package:flutter_webapi_first_course/services/auth_service.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
 
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   AuthService service = AuthService();
 
@@ -72,19 +74,23 @@ class LoginScreen extends StatelessWidget {
     String email = _emailController.text;
     String password = _passwordController.text;
 
-    try {
-       await service
-          .login(email: email, password: password)
-          .then((resultLogin)  {
+    await service.login(email: email, password: password).then(
+      (resultLogin) {
         if (resultLogin) {
           Navigator.pushNamed(context, "home");
         }
-      });
-    } on UserNotFindException {
+      },
+    ).catchError(
+      (error) {
+        var innerError = error as HttpException;
+        showExceptionDialog(context, content: innerError.message);
+      },
+      test: (error) => error is HttpException,
+    ).catchError((error) {
       showConfirmationDialog(context,
-              content:
-                  'Deseja criar um novo usuário usando o email $email e a senha inserida?',
-              affirmativeOption: 'CRIAR')
+          content:
+          'Deseja criar um novo usuário usando o email $email e a senha inserida?',
+          affirmativeOption: 'CRIAR')
           .then((value) {
         if (value != null && value) {
           service
@@ -96,6 +102,6 @@ class LoginScreen extends StatelessWidget {
           });
         }
       });
-    }
+    }, test: (error) => error is UserNotFindException);
   }
 }
