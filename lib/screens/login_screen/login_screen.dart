@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
@@ -20,7 +21,7 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.all(32),
         decoration:
-            BoxDecoration(border: Border.all(width: 8), color: Colors.white),
+        BoxDecoration(border: Border.all(width: 8), color: Colors.white),
         child: Form(
           child: Center(
             child: SingleChildScrollView(
@@ -75,13 +76,13 @@ class LoginScreen extends StatelessWidget {
     String password = _passwordController.text;
 
     await service.login(email: email, password: password).then(
-      (resultLogin) {
+          (resultLogin) {
         if (resultLogin) {
           Navigator.pushNamed(context, "home");
         }
       },
     ).catchError(
-      (error) {
+          (error) {
         var innerError = error as HttpException;
         showExceptionDialog(context, content: innerError.message);
       },
@@ -102,6 +103,10 @@ class LoginScreen extends StatelessWidget {
           });
         }
       });
-    }, test: (error) => error is UserNotFindException);
+    }, test: (error) => error is UserNotFindException).catchError((error) {
+      showExceptionDialog(context,
+          content: "O servidor não está respondendo, tente novamente mais tarde.");
+    },
+        test: (error) => error is TimeoutException);
   }
 }

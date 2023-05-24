@@ -1,12 +1,15 @@
 import "dart:convert";
 import "dart:io";
 import "package:flutter_webapi_first_course/services/http_interceptors.dart";
+import "package:flutter_webapi_first_course/services/webclient.dart";
 import "package:http/http.dart" as http;
 import "package:http_interceptor/http/http.dart";
 import "../models/journal.dart";
 
 class JournalService {
-  static const String url = "http://192.168.0.89:3000/";
+  String url = WebClient.url;
+  http.Client cliet = WebClient().client;
+
   static const String resorce = "journals/";
 
   http.Client client =
