@@ -19,6 +19,11 @@
       "email": "samel@gmail.com",
       "password": "$2a$10$vYWzjmFdFH8.vtwjOVYuMOC.9YGBWF1gz5c6uj37XZARXGJlOWLCO",
       "id": 4
+    },
+    {
+      "email": "lucas22@gmail.com",
+      "password": "$2a$10$dX1194T7LhF.twm2dgD96.RjHdPRimu7Kiq4JFKSUdDd4N5Gc6Z7i",
+      "id": 5
     }
   ],
   "learnhttp": {
