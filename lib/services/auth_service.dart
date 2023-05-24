@@ -13,7 +13,7 @@ class AuthService {
   http.Client client =
       InterceptedClient.build(interceptors: [LoggingInterceptor()]);
 
-  Future<bool>login({required String email, required String password}) async {
+  Future<bool> login({required String email, required String password}) async {
     http.Response response = await client.post(Uri.parse("${url}login"),
         body: {'email': email, 'password': password});
 
@@ -55,8 +55,8 @@ class AuthService {
     prefs.setString('email', email);
     prefs.setInt('id', id);
 
-    String? tokenSalvo = prefs.getString('accessToken');
-    print(tokenSalvo);
+    // String? tokenSalvo = prefs.getString('accessToken');
+    // print(tokenSalvo);
   }
 }
 

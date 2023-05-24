@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         margin: const EdgeInsets.all(32),
         decoration:
-        BoxDecoration(border: Border.all(width: 8), color: Colors.white),
+            BoxDecoration(border: Border.all(width: 8), color: Colors.white),
         child: Form(
           child: Center(
             child: SingleChildScrollView(
@@ -57,7 +57,8 @@ class LoginScreen extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         login(context);
-                      }, child: const Text("Continuar")),
+                      },
+                      child: const Text("Continuar")),
                 ],
               ),
             ),
@@ -72,14 +73,28 @@ class LoginScreen extends StatelessWidget {
     String password = _passwordController.text;
 
     try {
-      bool result = await service.login(email: email, password: password);
+       await service
+          .login(email: email, password: password)
+          .then((resultLogin)  {
+        if (resultLogin) {
+          Navigator.pushNamed(context, "home");
+        }
+      });
     } on UserNotFindException {
       showConfirmationDialog(context,
-          content: 'Deseja criar um novo usuário usando o email $email e a senha inserida?',
-          affirmativeOption: 'Criar').then((value) {
-            if(value != null && value){
-              service.register(email: email, password: password);
+              content:
+                  'Deseja criar um novo usuário usando o email $email e a senha inserida?',
+              affirmativeOption: 'CRIAR')
+          .then((value) {
+        if (value != null && value) {
+          service
+              .register(email: email, password: password)
+              .then((resultRegister) {
+            if (resultRegister) {
+              Navigator.pushReplacementNamed(context, 'home');
             }
+          });
+        }
       });
     }
   }
