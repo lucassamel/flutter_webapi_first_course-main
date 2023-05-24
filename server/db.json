@@ -26,76 +26,32 @@
   },
   "journals": [
     {
-      "id": "968ddf10-f340-11ed-84d2-337951fd78b4",
-      "content": "teste",
-      "created_at": "2023-05-13 16:49:21.962848",
-      "updated_at": "2023-05-13 16:49:21.962848"
-    },
-    {
-      "id": "9292ee40-f341-11ed-87b0-ada649e686f2",
-      "content": "teste quarta feira ! OK",
-      "created_at": "2023-05-10 16:57:24.358013",
-      "updated_at": "2023-05-10 16:57:24.358013"
-    },
-    {
-      "id": "5b434930-f346-11ed-b9f1-a1c7c83fe371",
-      "content": "Hoje  quinta feira!",
-      "created_at": "2023-05-11 17:31:37.582714",
-      "updated_at": "2023-05-11 17:31:37.582714"
-    },
-    {
-      "id": "70e157f0-f346-11ed-b9f1-a1c7c83fe371",
-      "content": "sem acento ",
-      "created_at": "2023-05-08 17:31:37.582714",
-      "updated_at": "2023-05-08 17:31:37.582714"
-    },
-    {
-      "id": "9a87e150-f346-11ed-b9f1-a1c7c83fe371",
-      "content": "Fim do curso!\n",
-      "created_at": "2023-05-15 17:31:37.582714",
-      "updated_at": "2023-05-15 17:31:37.582714"
-    },
-    {
-      "id": "084a0220-f34e-11ed-ae97-f14f06f1da50",
-      "content": "teste",
-      "created_at": "2023-05-06 18:22:00.334339",
-      "updated_at": "2023-05-06 18:22:00.334339"
-    },
-    {
-      "id": "18f1eca0-f34e-11ed-ae97-f14f06f1da50",
-      "content": "outro teste",
-      "created_at": "2023-05-08 18:22:00.334339",
-      "updated_at": "2023-05-08 18:22:00.334339"
-    },
-    {
-      "id": "ad922010-fa3c-11ed-a9bb-45accdecd3cd",
-      "content": "dia 16!",
-      "created_at": "2023-05-16 14:08:43.345061",
-      "updated_at": "2023-05-16 14:08:43.345061"
-    },
-    {
-      "id": "8c556110-fa40-11ed-a8e9-f7c967ae59b5",
-      "content": "domingo dia 21",
-      "created_at": "2023-05-21 14:37:18.709430",
-      "updated_at": "2023-05-21 14:37:18.709430"
-    },
-    {
       "id": "979db720-fa40-11ed-a8e9-f7c967ae59b5",
       "content": "sexta dia 19",
       "created_at": "2023-05-19 14:37:18.709430",
-      "updated_at": "2023-05-19 14:37:18.709430"
+      "updated_at": "2023-05-19 14:37:18.709430",
+      "userId": 3
     },
     {
       "id": "e39ab240-fa4f-11ed-8f24-1b6179ceb6c5",
       "content": "teste",
       "created_at": "2023-05-14 16:26:32.650216",
-      "updated_at": "2023-05-14 16:26:32.650216"
+      "updated_at": "2023-05-14 16:26:32.650216",
+      "userId": 2
     },
     {
       "id": "1564d210-fa50-11ed-b646-8bffefc6bbb2",
       "content": "kljsklas",
       "created_at": "2023-05-22 16:28:54.145224",
-      "updated_at": "2023-05-22 16:28:54.145224"
+      "updated_at": "2023-05-22 16:28:54.145224",
+      "userId": 2
+    },
+    {
+      "id": "02f11780-fa6c-11ed-bd6f-d32d958536ee",
+      "content": "teste segunda dia 15",
+      "created_at": "2023-05-15 19:48:48.060883",
+      "updated_at": "2023-05-15 19:48:48.060883",
+      "userId": 2
     }
   ]
 }
